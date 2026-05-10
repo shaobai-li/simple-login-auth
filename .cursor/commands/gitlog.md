@@ -1,0 +1,1 @@
+查看 temp/ 目录下的 diff.txt 和 status.txt 文件内容，写一句英文的 git commit log，要有scope和type。
