@@ -1,9 +1,14 @@
 import express from 'express'
 
+import './db.js'
+import authRouter from './auth.js'
+
 const app = express()
 const port = 3000
 
 app.use(express.json())
+
+app.use('/api', authRouter)
 
 app.get('/', (req, res) => {
   res.send('Server is running')
