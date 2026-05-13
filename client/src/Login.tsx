@@ -12,8 +12,8 @@ export default function Login() {
             className="mx-auto w-1/2 object-contain"
           />
           <div className="flex flex-col gap-4">
-            <Input placeholder="用户名" />
-            <Input type="password" placeholder="密码" />
+            <Input placeholder="用户名" aria-label="用户名" />
+            <Input type="password" placeholder="密码" aria-label="密码" />
             <Button type="button" className="w-full">
               登录
             </Button>
