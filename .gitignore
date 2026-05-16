@@ -8,8 +8,9 @@ dist/
 # Runtime data
 *.sqlite
 
-# Accidental lockfile (project uses npm)
-pnpm-lock.yaml
+# Lockfiles (pnpm)
+package-lock.json
+yarn.lock
 
 # Personal task notes
 tasks/
