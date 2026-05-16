@@ -7,7 +7,9 @@
     "create-user": "tsx scripts/createUser.ts"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3"]
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.6.13",
@@ -15,9 +17,13 @@
     "@types/jsonwebtoken": "^9.0.10",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^11.9.1",
+    "cors": "^2.8.6",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19"
   }
 }
