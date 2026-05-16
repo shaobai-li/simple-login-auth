@@ -4,3 +4,15 @@ dist/
 *.local
 /temp/
 .claude/
+
+# Runtime data
+*.sqlite
+
+# Accidental lockfile (project uses npm)
+pnpm-lock.yaml
+
+# Personal task notes
+tasks/
+
+# PR templates / GitHub config
+.github/
