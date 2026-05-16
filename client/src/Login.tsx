@@ -22,7 +22,7 @@ export default function Login() {
       </div>
       <div className="relative min-h-dvh w-2/3 shrink-0">
         <img
-          src="/log.png"
+          src="/login-bg.png"
           alt=""
           className="absolute inset-0 size-full object-cover"
         />
