@@ -7,6 +7,8 @@ dist/
 
 # Runtime data
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 
 # Lockfiles (pnpm)
 package-lock.json
