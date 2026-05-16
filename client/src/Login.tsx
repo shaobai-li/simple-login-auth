@@ -6,7 +6,16 @@ import { Input } from '@/components/ui/input'
 import { login, setToken } from './api'
 
 interface LoginProps {
-  onLoginSuccess?: () => void
+  onLoginSuccess?: (username: string) => void
+}
+
+function decodeUsername(token: string): string | null {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]))
+    return payload.username ?? null
+  } catch {
+    return null
+  }
 }
 
 export default function Login({ onLoginSuccess }: LoginProps) {
@@ -27,7 +36,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     try {
       const token = await login(username, password)
       setToken(token)
-      onLoginSuccess?.()
+      onLoginSuccess?.(decodeUsername(token) ?? username)
     } catch (e) {
       setError(e instanceof Error ? e.message : '登录失败')
     } finally {
