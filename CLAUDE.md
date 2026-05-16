@@ -23,13 +23,13 @@ Simple login authentication project with two separate packages:
 ## Commands
 
 ### Client
-- `cd client && npm run dev` — Start Vite dev server (default http://localhost:5173)
-- `cd client && npm run build` — Type-check with tsc, then Vite production build
-- `cd client && npm run preview` — Preview production build locally
+- `cd client && pnpm dev` — Start Vite dev server (default http://localhost:5173)
+- `cd client && pnpm build` — Type-check with tsc, then Vite production build
+- `cd client && pnpm preview` — Preview production build locally
 
 ### Server
-- `cd server && npm start` — Start Express server via tsx (default http://localhost:3000)
-- `cd server && npx tsx scripts/createUser.ts` — Run user creation script
+- `cd server && pnpm start` — Start Express server via tsx (default http://localhost:3000)
+- `cd server && pnpm create-user` — Run user creation script
 
 ## Key conventions
 
