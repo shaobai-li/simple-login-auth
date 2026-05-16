@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 
 import './db.js'
@@ -8,6 +9,9 @@ const app = express()
 const port = 3000
 
 app.use(express.json())
+
+const CORS_ORIGIN = process.env.CORS_ORIGIN ?? 'http://localhost:5173'
+app.use(cors({ origin: CORS_ORIGIN }))
 
 app.use('/api', authRouter)
 
