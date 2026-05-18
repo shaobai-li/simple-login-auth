@@ -58,7 +58,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 alt=""
                 className="mx-auto w-1/2 object-contain"
               />
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 px-4">
                 <Input
                   placeholder="用户名"
                   aria-label="用户名"
@@ -99,7 +99,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
         <img
           src="/login-bg.png"
           alt=""
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full object-cover object-left"
         />
       </div>
     </div>
