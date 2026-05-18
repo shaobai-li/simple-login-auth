@@ -46,43 +46,53 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
   return (
     <div className="flex min-h-dvh w-full">
-      <div className="flex w-1/3 shrink-0 flex-col justify-center bg-background px-8">
-        <div className="mx-auto flex w-full max-w-xs flex-col gap-3">
-          <img
-            src="/OmniAge_Logo_4K.svg"
-            alt=""
-            className="mx-auto w-1/2 object-contain"
-          />
-          <div className="flex flex-col gap-4">
-            <Input
-              placeholder="用户名"
-              aria-label="用户名"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              disabled={loading}
-            />
-            <Input
-              type="password"
-              placeholder="密码"
-              aria-label="密码"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              disabled={loading}
-              onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
-            />
-            {error && (
-              <p className="text-sm text-destructive">{error}</p>
-            )}
-            <Button
-              type="button"
-              className="w-full"
-              onClick={handleSubmit}
-              disabled={loading}
-            >
-              {loading && <Loader2 className="animate-spin" />}
-              {loading ? '登录中...' : '登录'}
-            </Button>
+      <div className="flex w-1/3 shrink-0 flex-col bg-background px-8">
+        <div className="flex flex-1 flex-col">
+          <div className="flex flex-1 flex-col justify-center">
+            <div className="mx-auto flex w-full max-w-xs flex-col gap-3">
+              <p className="text-center text-sm font-semibold text-black -mb-7">
+                Welcome to login
+              </p>
+              <img
+                src="/OmniAge_Logo_4K.svg"
+                alt=""
+                className="mx-auto w-1/2 object-contain"
+              />
+              <div className="flex flex-col gap-4">
+                <Input
+                  placeholder="用户名"
+                  aria-label="用户名"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  disabled={loading}
+                />
+                <Input
+                  type="password"
+                  placeholder="密码"
+                  aria-label="密码"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  disabled={loading}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                />
+                {error && (
+                  <p className="text-sm text-destructive">{error}</p>
+                )}
+                <Button
+                  type="button"
+                  className="w-full"
+                  onClick={handleSubmit}
+                  disabled={loading}
+                >
+                  {loading && <Loader2 className="animate-spin" />}
+                  {loading ? '登录中...' : '登录'}
+                </Button>
+              </div>
+            </div>
           </div>
+          <p className="pb-10 text-center text-sm font-semibold text-black">
+            Build the intelligence<br />Use the intelligence
+          </p>
         </div>
       </div>
       <div className="relative min-h-dvh w-2/3 shrink-0">
