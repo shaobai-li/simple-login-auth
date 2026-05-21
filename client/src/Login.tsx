@@ -46,7 +46,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
   return (
     <div className="flex min-h-dvh w-full">
-      <div className="flex w-1/3 shrink-0 flex-col bg-background px-8">
+      <div className="flex w-full md:w-1/3 shrink-0 flex-col bg-background px-8">
         <div className="flex flex-1 flex-col">
           <div className="flex flex-1 flex-col justify-center">
             <div className="mx-auto flex w-full max-w-xs flex-col gap-3">
@@ -95,7 +95,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
           </p>
         </div>
       </div>
-      <div className="relative min-h-dvh w-2/3 shrink-0">
+      <div className="relative hidden min-h-dvh w-2/3 shrink-0 md:block">
         <img
           src="/login-bg.png"
           alt=""
