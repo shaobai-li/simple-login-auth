@@ -14,7 +14,7 @@ declare global {
   namespace Express {
     interface Request {
       user?: {
-        id: number
+        id: string
         username?: string
       }
     }
@@ -45,15 +45,14 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
     }
 
     const { sub, username } = payload as AuthTokenPayload
-    const id = Number(sub)
 
-    if (!Number.isInteger(id)) {
+    if (typeof sub !== 'string' || !sub) {
       res.status(401).json({ message: '无效的登录 token' })
       return
     }
 
     req.user = {
-      id,
+      id: sub,
       username: typeof username === 'string' ? username : undefined,
     }
 

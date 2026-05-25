@@ -12,7 +12,7 @@ const JWT_SECRET = process.env.JWT_SECRET ?? 'dev-secret-change-in-production'
 const JWT_EXPIRES_IN = '7d'
 
 interface User {
-  id: number
+  id: string
   username: string
   password_hash: string
 }
