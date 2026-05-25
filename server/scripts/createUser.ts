@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto'
 import { hash } from 'bcryptjs'
 
 import db from '../db.js'
@@ -14,10 +15,10 @@ const passwordHash = await hash(password, 12)
 try {
   db.prepare(
     `
-      INSERT INTO users (username, password_hash)
-      VALUES (?, ?)
+      INSERT INTO users (id, username, password_hash)
+      VALUES (?, ?, ?)
     `,
-  ).run(username, passwordHash)
+  ).run(randomUUID(), username, passwordHash)
 
   console.log(`User created: ${username}`)
 } catch (error) {
