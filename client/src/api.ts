@@ -32,7 +32,7 @@ export async function login(username: string, password: string): Promise<string>
   return token as string
 }
 
-export async function getMe(): Promise<{ id: number; username: string }> {
+export async function getMe(): Promise<{ id: string; username: string }> {
   const token = getToken()
   if (!token) throw new Error('未登录')
 
@@ -47,5 +47,5 @@ export async function getMe(): Promise<{ id: number; username: string }> {
   }
 
   const { user } = await res.json()
-  return user as { id: number; username: string }
+  return user as { id: string; username: string }
 }
